@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Jumping Tiger</string>
+    <string name="send">Send</string>
+    <string name="tiger">Tiger</string>
+    <string name="hamburger" translatable="false">Hamburger</string>
+    <string name="jungle">Jungle</string>
+
+
+</resources>
