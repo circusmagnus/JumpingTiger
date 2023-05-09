@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
-import io.ktor.client.engine.android.Android
+import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
 import io.ktor.serialization.kotlinx.json.json
@@ -46,7 +46,7 @@ internal data class Question(
 internal fun TaskScreen(state: TigerScreenState) {
 
     val question by produceState(initialValue = Question(task = "Pytanie...", result = "hack")) {
-        val client = HttpClient(Android) {
+        val client = HttpClient(CIO) {
             install(ContentNegotiation) {
                 json()
             }
